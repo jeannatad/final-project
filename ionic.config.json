@@ -1,0 +1,7 @@
+{
+  "name": "tiktok-ui-clone",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}
