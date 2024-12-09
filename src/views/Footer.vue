@@ -36,3 +36,5 @@
 import { IonTabBar, IonTabButton, IonTabs, IonLabel, IonIcon, IonPage, IonRouterOutlet } from '@ionic/vue';
 import { search, home, ellipse, square, triangle } from 'ionicons/icons';
 </script>
+
+
