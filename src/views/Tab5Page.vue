@@ -1,7 +1,7 @@
 <template>
   <ion-page>
     <ion-content :fullscreen="true">
-      <h3>Search</h3>
+      <h3>Profile</h3>
     </ion-content>
   </ion-page>
 </template>
