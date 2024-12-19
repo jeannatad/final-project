@@ -17,7 +17,7 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
         path: 'home',
-        component: () => import('@/views/Tab1Page.vue'),
+        component: () => import('@/views/home.vue'),
       },
       {
         path: 'foryou',
@@ -25,11 +25,11 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
         path: 'search',
-        component: () => import('@/views/Tab2Page.vue'),
+        component: () => import('@/views/search.vue'),
       },
       {
         path: 'upload',
-        component: () => import('@/views/Tab3Page.vue'),
+        component: () => import('@/views/upload.vue'),
       },
       {
         path: 'chat',
@@ -37,8 +37,14 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
         path: 'profile',
-        component: () => import('@/views/Tab5Page.vue'),
+        component: () => import('@/views/profile/profile.vue'),
       },
+            {
+        path: 'EditProfile',
+        component: () => import('@/views/EditProfile.vue'),
+      },
+      
+      
     ],
   },
 ];

@@ -107,7 +107,7 @@ export default defineComponent({
 
 .image img {
   position: absolute;
-  top: 38%;
+  top: 35%;
   right: 5%;
   width: 50px;
   height: 50px;
@@ -117,7 +117,7 @@ export default defineComponent({
 
 .disc img {
   position: absolute;
-  top: 88%;
+  top: 89%;
   right: 7%;
   width: 35px;
   height: 35px;
