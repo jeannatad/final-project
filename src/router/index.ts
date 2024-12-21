@@ -32,19 +32,17 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import('@/views/upload.vue'),
       },
       {
-        path: 'chat',
+        path: 'message',
         component: () => import('@/views/inbox.vue'),
       },
       {
         path: 'profile',
         component: () => import('@/views/profile/profile.vue'),
       },
-            {
+      {
         path: 'EditProfile',
         component: () => import('@/views/EditProfile.vue'),
       },
-      
-      
     ],
   },
 ];

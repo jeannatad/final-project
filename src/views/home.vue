@@ -6,8 +6,12 @@
           <a :button="true" @click="following()" class="link">Following | </a>
           <a :button="true" @click="foryou()" class="link"> For You</a>
         </p>
+        <div class="interaction">
+          <div class="search">
+            <ion-icon :icon="search" aria-hidden="true"></ion-icon>
+          </div>
+        </div>
       </div>
-
       <img
         class="background-image"
         src="https://s3-alpha-sig.figma.com/img/b998/f746/c5b260c4c489bba299c17030dee13bb7?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=GqQuvmvQJ~u-aRtKRrPayqsL3rJ2GC7V8-7jEXHQjmHLi2HQJuKQoZLTCKB4YIpoWtZ8TFoGCDZT4dQai-qjlf2CEaFUoRehTjt-MZ1PJpM2n7q0EGK1nro0AJVVJsCpnDEbMQqe-hDim5BI~ehsoqzFTEHBihXKvsDe2yjseoPuHBSYQHC4S31hVCgPrG8ylx5DH~Ww7bKTYL5y3B~qKcQSuMGwISPlyYDSmzRBk2zmy-EXy7QwmxzEICnWg7tBDiYexUh1oj7hN05TdIeSwfkmFTWBfTFi84g0fvmZObJNpnB9MRvhBbDQ~hoGnioT-K6agTBYr227AHqcJrpP5w__"
@@ -47,14 +51,15 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { IonPage, IonIcon } from '@ionic/vue';
-import { heart, chatbubble, share } from 'ionicons/icons';
+import { IonPage, IonIcon, IonContent } from '@ionic/vue';
+import { heart, chatbubble, share, search } from 'ionicons/icons';
 
 export default defineComponent({
   name: 'following',
   components: {
     IonPage,
     IonIcon,
+    IonContent,
   },
   methods: {
     async following() {
@@ -69,6 +74,7 @@ export default defineComponent({
       heart,
       chatbubble,
       share,
+      search,
     };
   },
 });
