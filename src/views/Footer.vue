@@ -17,7 +17,7 @@
           <ion-icon aria-hidden="true" :icon="add" />
         </ion-tab-button>
 
-        <ion-tab-button tab="chat" href="/tabs/chat">
+        <ion-tab-button tab="message" href="/tabs/message">
           <ion-icon aria-hidden="true" :icon="chatbox" />
           <ion-label>Inbox</ion-label>
         </ion-tab-button>
@@ -41,7 +41,14 @@ import {
   IonPage,
   IonRouterOutlet,
 } from '@ionic/vue';
-import { search, home, add, chatbox, person } from 'ionicons/icons';
+import {
+  home,
+  add,
+  chatbox,
+  person,
+  notifications,
+  search,
+} from 'ionicons/icons';
 </script>
 
 <style scoped>

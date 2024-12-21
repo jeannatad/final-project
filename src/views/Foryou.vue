@@ -3,8 +3,8 @@
     <ion-content class="content">
       <div class="title">
         <p>
-          <button class="link" @click="following">Following |</button>
-          <button class="link" @click="foryou">For You</button>
+          <a :button="true" @click="following()" class="link">Following | </a>
+          <a :button="true" @click="foryou()" class="link"> For You</a>
         </p>
       </div>
       <img
@@ -18,7 +18,7 @@
           alt="Profile"
         />
       </div>
-      c<div class="interaction">
+      <div class="interaction">
         <div class="icon-wrapper">
           <ion-icon :icon="heart" class="icon"></ion-icon>
           <h6 class="text-button">328.7k</h6>
@@ -44,13 +44,15 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { IonIcon } from '@ionic/vue';
+import { IonPage, IonIcon, IonContent } from '@ionic/vue';
 import { heart, chatbubble, share } from 'ionicons/icons';
 
 export default defineComponent({
   name: 'Following',
   components: {
+    IonPage,
     IonIcon,
+    IonContent,
   },
   methods: {
     following() {
@@ -84,28 +86,27 @@ export default defineComponent({
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -1;
+  opacity: 1;
 }
 
-.title {
+.title p {
+  position: relative;
   text-align: center;
   margin-top: 50px;
   color: white;
   font-size: 18px;
+  z-index: 2;
 }
 
-.link {
-  background: none;
-  border: none;
+.text {
+  font-weight: bold;
   color: white;
-  font-size: 16px;
-  cursor: pointer;
 }
 
 .image img {
   position: absolute;
-  top: 40%;
-  right: 3%;
+  top: 32%;
+  right: 5%;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -114,8 +115,8 @@ export default defineComponent({
 
 .disc img {
   position: absolute;
-  top: 92%;
-  right: 5%;
+  top: 90%;
+  right: 7%;
   width: 35px;
   height: 35px;
   border-radius: 50%;
@@ -131,30 +132,30 @@ export default defineComponent({
     transform: rotate(360deg);
   }
 }
-
+.link {
+  color: white;
+  text-decoration: none;
+}
 .interaction {
   position: absolute;
-  bottom: 9%;
+  bottom: 15%;
   right: 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 5px;
   color: white;
+  font-size: 50px;
 }
 
-.icon-wrapper {
+.interaction div {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.icon {
-  font-size: 30px;
-}
-
 .text-button {
-  font-size: 10px;
-  text-align: center;
+  font-size: 12px;
+  margin-top: 5px;
 }
 </style>
